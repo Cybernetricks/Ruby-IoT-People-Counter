@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eventId: 1
+  sensorGroup: 1
+  currentCount: 1
+
+two:
+  eventId: 1
+  sensorGroup: 1
+  currentCount: 1
