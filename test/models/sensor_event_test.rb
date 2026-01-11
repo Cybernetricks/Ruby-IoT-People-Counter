@@ -1,6 +1,6 @@
 require "test_helper"
 
-class CountTest < ActiveSupport::TestCase
+class SensorEventTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
