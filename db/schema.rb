@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_01_11_212733) do
+ActiveRecord::Schema[8.1].define(version: 2026_01_11_213103) do
   create_table "counts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.integer "currentCount"
@@ -23,4 +23,15 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_11_212733) do
     t.string "name", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "sensor_events", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.integer "delta", null: false
+    t.datetime "recorded_at", null: false
+    t.integer "room_id", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_sensor_events_on_room_id"
+  end
+
+  add_foreign_key "sensor_events", "rooms"
 end
